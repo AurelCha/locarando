@@ -1,0 +1,334 @@
+/*font-family: 'Source Sans Pro', sans-serif; */
+@media (max-device-width : 480px) {
+h1 {
+    font-family: 'Source Sans Pro', sans-serif; 
+}
+
+
+
+body {
+    
+}
+
+/* HEADER */
+header {
+  height: 60px;
+}
+.logo {
+    font-size: 15px;
+    color: #0e2431;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position:relative;
+    background-color:white;
+    height: 55px;
+    margin: 0;
+}
+.logo i {
+  color:#ABB2B9;
+}
+
+
+
+absolute{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  position:sticky;
+}
+
+.logo-blanc {
+    width: 80px;
+    color:white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* NAVIGATION */
+
+.container {
+  max-width: 1050px;
+  width: 100%;
+  margin: 0;
+  display:flex;
+  justify-content:center;
+}
+.navigation {
+    display:none;
+}
+
+.bandeau {
+  background: white;
+  height: 60px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+}
+.bandeau i {
+  color: grey;
+}
+.bandeau:before { 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.bandeau .bandeau-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+.icones {
+  display:flex;
+}
+.icones a {
+  margin:5px;
+}
+.btn {
+  display: inline-block;
+  border: none;
+  background: black;
+  color: black;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  transition: opacity 1s ease-in-out;
+  text-decoration: none;
+}
+.btn:hover {
+  opacity: 0.7;
+}
+
+/* MENU STYLES */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.navbar .burger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+}
+.navbar .hamburger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  padding: 1rem;
+  background: #69AFAF; /* fond burger menu */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hamburger Line */
+.navbar .hamburger > div {
+  position: relative;
+  flex: none;
+  width: 100%;
+  height: 2px;
+  background: #0A7A7A; /* couleur barre menu */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+/* Hamburger Lines - Top & Bottom */
+.navbar .hamburger > div::before,
+.navbar .hamburger > div::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+}
+
+/* Moves Line Down */
+.navbar .hamburger > div::after {
+  top: 10px;
+}
+
+/* Toggler Animation */
+.navbar .burger:checked + .hamburger > div {
+  transform: rotate(135deg);
+}
+
+/* Turns Lines Into X */
+.navbar .burger:checked + .hamburger > div:before,
+.navbar .burger:checked + .hamburger > div:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+/* Rotate On Hover When Checked */
+.navbar .burger:checked:hover + .hamburger > div {
+  transform: rotate(225deg);
+}
+
+/* Show Menu */
+.navbar .burger:checked ~ .menu {
+  visibility: visible;
+}
+
+.navbar .burger:checked ~ .menu > div {
+  transform: scale(1);
+  transition-duration: 0.5s;
+}
+
+.navbar .burger:checked ~ .menu > div > div {
+  opacity: 1;
+  transition:  opacity 0.4s ease 0.4s;
+}
+
+.navbar .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar .menu > div {
+  background: #0A7A7A;
+  border-radius: 50%;
+  width: 200vw;
+  height: 200vw;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all 0.4s ease;
+}
+
+.navbar .menu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.navbar .menu > div > div > ul > li {
+  list-style: none;
+  color: #69AFAF;
+  font-size: 1.5rem;
+  padding: 1rem;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.navbar .menu > div > div > ul > li > a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+
+
+
+
+/*FOOTER*/
+
+.bcg_image {
+    height: 200px;
+    background-image: URL("../images/footer.jpg");
+    background-size:cover;background-repeat:no-repeat;
+    background-position:center;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    gap:50px;
+}
+
+.text_foot {
+    position:relative;
+    height: 80px;
+    width: 130px;
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    color:black;
+}
+
+
+h4 {
+   
+}
+
+h4 a {
+    text-decoration:none;
+}
+
+
+}
+
+
+
+@media (min-width:481px)  {
+.navbar {
+    display: none;
+}
+.navigation {
+    display:block;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap: 20px;
+    background-color:#A9CCE3;
+    height:75px;
+}
+.menu a{
+  text-decoration:none;
+  font-family: 'Source Sans Pro', sans-serif; 
+  color:white;
+  font-size:20px;
+}
+
+.menu img {
+  height:50px;
+  width:100px;
+}  
+  
+
+.logo {
+  display:none;
+}
+}
+
+
+@media (min-width:769px) {
+  
+}
